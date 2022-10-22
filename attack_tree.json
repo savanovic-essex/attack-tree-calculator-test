@@ -2,133 +2,55 @@
   "nodes": [
     {
       "id": 1,
-      "name": "open safe",
-      "value": 3.2,
-      "damage": 1,
-      "reproducibility": 3,
-      "exploitability": 1,
-      "affected_users": 0,
-      "discoverability": 2
+      "name": "Open Safe"
     },
     {
       "id": 2,
-      "name": "pick lock",
-      "value": 0.3,
-      "damage": 1,
-      "reproducibility": 3,
-      "exploitability": 2,
-      "affected_users": 2,
-      "discoverability": 3
+      "name": "Pick Lock"
     },
     {
       "id": 3,
-      "name": "learn combo",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Learn Combo"
     },
     {
       "id": 4,
-      "name": "cut open safe",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Cut Open Safe"
     },
     {
       "id": 5,
-      "name": "install improperly",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Install Improperly"
     },
     {
       "id": 6,
-      "name": "find written combo",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Find Written Combo"
     },
     {
       "id": 7,
-      "name": "get combo from target",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Get Combo From Target"
     },
     {
       "id": 8,
-      "name": "threaten",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Threaten"
     },
     {
       "id": 9,
-      "name": "blackmail",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Blackmail"
     },
     {
       "id": 10,
-      "name": "eavesdrop",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Eavesdrop"
     },
     {
       "id": 11,
-      "name": "bribe",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Bribe"
     },
     {
       "id": 12,
-      "name": "listen to conversation",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Listen To Conversation"
     },
     {
       "id": 13,
-      "name": "get target to state combo",
-      "value": 4.3,
-      "damage": 0,
-      "reproducibility": 0,
-      "exploitability": 2,
-      "affected_users": 3,
-      "discoverability": 3
+      "name": "Get Target To State Combo"
     }
   ],
   "edges": [

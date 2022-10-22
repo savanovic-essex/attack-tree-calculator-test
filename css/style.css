@@ -1,0 +1,76 @@
+html, body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+table.dreadTable {
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    border-collapse: collapse;
+    text-transform: capitalize;
+}
+
+table.dreadTable td, table.dreadTable th {
+    border: 1px solid #AAAAAA;
+    padding: 5px 5px;
+}
+
+table.dreadTable tbody td {
+    font-size: 12px;
+}
+
+table.dreadTable thead {
+    background: #EEEEEE;
+    background: -moz-linear-gradient(top, #f2f2f2 0%, #efefef 66%, #EEEEEE 100%);
+    background: -webkit-linear-gradient(top, #f2f2f2 0%, #efefef 66%, #EEEEEE 100%);
+    background: linear-gradient(to bottom, #f2f2f2 0%, #efefef 66%, #EEEEEE 100%);
+    border-bottom: 2px solid #444444;
+}
+
+table.dreadTable thead th {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+    text-align: left;
+    border-left: 0px solid #D0E4F5;
+}
+
+table.dreadTable thead th:first-child {
+    border-left: none;
+}
+
+table.dreadTable tfoot td {
+    font-size: 14px;
+}
+
+table.dreadTable tfoot .links {
+    text-align: right;
+}
+
+table.dreadTable tfoot .links a {
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+#mynetwork {
+    width: 50%;
+    height: 100%;
+    background-color: #eeeeee;
+    position: relative;
+    float: left;
+    z-index: 9999;
+}
+
+
+#config {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
