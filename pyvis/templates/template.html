@@ -52,12 +52,7 @@
         // adding nodes and edges to the graph
         data = {nodes: nodes, edges: edges};
 
-        let nodeLeafs = Object.values(nodes._data)
-
-        nodeLeafs = nodeLeafs.map((item) => {
-            return item.title
-        })
-
+        // option such as colors, behaviours, etc. for the graph, i.e. the attack tree
         let options = {
             "configure": {
                 "enabled": false
@@ -231,63 +226,76 @@
     }
 
     function calculateRisk() {
+        // read in nodes from the vis dataset
         let nodes = new vis.DataSet({{nodes|tojson}});
-        let nodeLeafs = Object.values(nodes._data)
+        // coarse data cleanup - retuning only needed values
+        let nodeLeaves = Object.values(nodes._data)
 
-        nodeLeafs = nodeLeafs.map((item) => {
+        // return only node names
+        nodeLeaves = nodeLeaves.map((item) => {
             return item.title
         })
 
-        let leafsWithScores = []
+        // instantiate a variable (an empty array)
+        let leavesWithScores = []
 
-        nodeLeafs.forEach(function (leaf) {
+        // fetch tree data by their IDs (combination of name and DREAD labels)
+        // populate the array with leaves and their DREAD values
+        // calculate the DREAD score for each leaf
+        nodeLeaves.forEach(function (leaf) {
             let damage = document.getElementById(leaf+':damage').selectedOptions[0].value;
             let reproducibility = document.getElementById(leaf+':reproducibility').selectedOptions[0].value;
             let exploitability = document.getElementById(leaf+':exploitability').selectedOptions[0].value;
             let affected_users = document.getElementById(leaf+':affected_users').selectedOptions[0].value;
             let discoverability = document.getElementById(leaf+':discoverability').selectedOptions[0].value;
             let score = (parseInt(damage) + parseInt(reproducibility) + parseInt(exploitability) + parseInt(affected_users) + parseInt(discoverability)) / 5
-            //console.log(leaf + ' DREAD Score: ' + score)
 
-            return leafsWithScores.push({title: leaf, score: score})
+            return leavesWithScores.push({title: leaf, score: score})
         })
 
+        // remove the initial table
         const element = document.getElementById("dreadTable");
         element.remove();
 
+        // create a new table
         const table = document.createElement("table");
         table.setAttribute("id", "newTable")
         table.setAttribute("class", "dreadTable")
         const newTable = document.getElementById("config");
         newTable.appendChild(table);
 
-        // Get the app element
+        // get the table from html
         let config = document.querySelector('#newTable');
 
-        // Create markup
-        config.innerHTML = `<thead><th>Leaf Node</th><td>DREAD Score</td></thead><tbody>` + leafsWithScores.map(function (leaf) {
+        // populate the table with nodes and DREAD scores
+        config.innerHTML = `<thead><th>Leaf Node</th><td>DREAD Score</td></thead><tbody>` + leavesWithScores.map(function (leaf) {
             return (`<tr>
 				<td>${leaf.title}</td>
 				<td>${leaf.score}</td>
 				</tr>`)
         }).join('') + '</tbody>';
 
-        console.log(leafsWithScores)
     }
 
+    // this function creates a DREAD table calculator, populated by node names
     function drawTable() {
+        // read in nodes from the vis dataset
         let nodes = new vis.DataSet({{nodes|tojson}});
-        let nodeLeafs = Object.values(nodes._data)
+        // coarse data cleanup - retuning only needed values
+        let nodeLeaves = Object.values(nodes._data)
 
-        nodeLeafs = nodeLeafs.map((item) => {
+        // return only node names
+        nodeLeaves = nodeLeaves.map((item) => {
             return item.title
         })
 
-        // Get the app element
+        // get the table from html
         let config = document.querySelector('#tableID');
 
-        // Create markup
-        config.innerHTML = nodeLeafs.map(function (leaf) {
+        // populate the table with nodes select elements for DREAD scoring
+        // each node will be assigned an ID (node name + DREAD label)
+        // e.g. openSafe:damage
+        config.innerHTML = nodeLeaves.map(function (leaf) {
             return (`<tr>
 				<td>${leaf}</td>
 				<td>
