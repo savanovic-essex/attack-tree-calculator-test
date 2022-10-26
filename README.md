@@ -144,6 +144,32 @@ They should end up with something like this:
 ![Score results](./img/score_results.png)
 Figure 7.
 
+## Summary
+The aim of this exercise was to compare the risk states of the company Pampered Pets before and after the process of digitalisation.
+This was achieved by visualising attack trees and then calculating risks scores based on the DREAD methodology for each node on the attack tree.
+
+In the images below, we can see that based on the values inserted in the DREAD categories of nodes of both attack trees,
+one can conclude that the overall risk score is a bit higher in the "after digitalisation" scenario - to be precise, it is 0.15 higher.
+
+Before the process of digitalisation, the overall risk score came to **5.19** and after the aforementioned process, it amounted to **5.34**.
+Based on the score, I can recommend the company maintain their *status quo*.
+
+In order to better understand the values inserted, I suggest visiting the following web page, which explains all categories and the magnitude of their values:
+[EC-Council](https://www.eccouncil.org/cybersecurity-exchange/threat-intelligence/dread-threat-modeling-intro/).
+
+![Before Digitalisation - DREAD Values](./img/before_dig_values.png)
+Figure 8: Values inserted in DREAD categories - Scenario: before digitalisation
+
+![Before Digitalisation - DREAD Values](./img/before_dig_score.png)
+Figure 9: DREAD Risk Score - Scenario: before digitalisation
+
+![After Digitalisation - DREAD Values](./img/after_dig_values.png)
+Figure 10: Values inserted in DREAD categories - Scenario: after digitalisation
+
+![After Digitalisation - DREAD Values](./img/after_dig_score.png)
+Figure 11: DREAD Risk Score - Scenario: after digitalisation
+
+
 ## References
 Henriksen, M. (2018) Draw.io for threat modelling. Michael Henriksen - Freelance Security Engineer & Consultant. Available from: https://michenriksen.com/blog/drawio-for-threat-modeling/ [Accessed 13 October 2022].
 

@@ -29,10 +29,6 @@
       "name": "Fake\nLarge Orders"
     },
     {
-      "id": 8,
-      "name": "Lost Data\n"
-    },
-    {
       "id": 9,
       "name": "Lost\nInternet Access"
     },
@@ -93,10 +89,6 @@
     {
       "from": 3,
       "to": 14
-    },
-    {
-      "from": 4,
-      "to": 8
     },
     {
       "from": 5,

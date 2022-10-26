@@ -268,7 +268,7 @@
         })
 
         let rootScore = leavesWithScores.map(item => item.score).reduce((prev, next) => prev + next);
-        rootScore = rootScore / leavesWithScores.length
+        rootScore = (rootScore / leavesWithScores.length).toFixed(2);
 
         // get the table from html
         let config = document.querySelector('#newTable');
