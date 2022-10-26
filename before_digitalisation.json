@@ -1,0 +1,114 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "name": "Compromise Security\n"
+    },
+    {
+      "id": 2,
+      "name": "Email For Orders\n"
+    },
+    {
+      "id": 3,
+      "name": "No Order Tracking\n"
+    },
+    {
+      "id": 4,
+      "name": "Unsecured Spreadsheet\n"
+    },
+    {
+      "id": 5,
+      "name": "Unprotected Network\nHub"
+    },
+    {
+      "id": 6,
+      "name": "Locally Stored\nTransactions"
+    },
+    {
+      "id": 7,
+      "name": "Fake\nLarge Orders"
+    },
+    {
+      "id": 8,
+      "name": "Lost Data\n"
+    },
+    {
+      "id": 9,
+      "name": "Lost\nInternet Access"
+    },
+    {
+      "id": 10,
+      "name": "Access To\nShared Documents"
+    },
+    {
+      "id": 11,
+      "name": "Lost\nTransactions"
+    },
+    {
+      "id": 12,
+      "name": "No Pick-Up\nInformation"
+    },
+    {
+      "id": 13,
+      "name": "Wrong Customer\n"
+    },
+    {
+      "id": 14,
+      "name": "Double Fulfilment\n"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 1,
+      "to": 3
+    },
+    {
+      "from": 1,
+      "to": 4
+    },
+    {
+      "from": 1,
+      "to": 5
+    },
+    {
+      "from": 1,
+      "to": 6
+    },
+    {
+      "from": 2,
+      "to": 7
+    },
+    {
+      "from": 3,
+      "to": 12
+    },
+    {
+      "from": 3,
+      "to": 13
+    },
+    {
+      "from": 3,
+      "to": 14
+    },
+    {
+      "from": 4,
+      "to": 8
+    },
+    {
+      "from": 5,
+      "to": 9
+    },
+    {
+      "from": 5,
+      "to": 10
+    },
+    {
+      "from": 6,
+      "to": 11
+    }
+  ]
+}

@@ -91,28 +91,28 @@
                     "direction": "UD",
                     "edgeMinimization": true,
                     "enabled": true,
-                    "levelSeparation": 150,
+                    "levelSeparation": 170,
                     "parentCentralization": true,
                     "sortMethod": "directed",
-                    "treeSpacing": 400
+                    "treeSpacing": 500
                 },
                 "improvedLayout": true,
                 "randomSeed": 0
             },
             "physics": {
                 "barnesHut": {
-                    "avoidOverlap": 0,
+                    "springConstant": 0,
+                    "avoidOverlap": 0.2,
                     "centralGravity": 0.3,
                     "damping": 0.09,
                     "gravitationalConstant": -80000,
-                    "springConstant": 0.001,
                     "springLength": 250
                 },
                 "enabled": true,
                 "hierarchicalRepulsion": {
                     "centralGravity": 0.0,
                     "damping": 0.09,
-                    "nodeDistance": 170,
+                    "nodeDistance": 160,
                     "springConstant": 0.01,
                     "springLength": 100
                 },
@@ -229,7 +229,7 @@
         let nodes = new vis.DataSet({{nodes|tojson}});
         // coarse data cleanup - retuning only needed values
         let nodeLeaves = Object.values(nodes._data)
-
+        nodeLeaves = nodeLeaves.filter((item) => item.id !== "1")
         // return only node names
         nodeLeaves = nodeLeaves.map((item) => {
             return item.title
@@ -263,6 +263,13 @@
         const newTable = document.getElementById("config");
         newTable.appendChild(table);
 
+        leavesWithScores.map((item) => {
+            console.log(JSON.stringify(item, null, 2))
+        })
+
+        let rootScore = leavesWithScores.map(item => item.score).reduce((prev, next) => prev + next);
+        rootScore = rootScore / leavesWithScores.length
+
         // get the table from html
         let config = document.querySelector('#newTable');
 
@@ -272,7 +279,7 @@
 				<td>${leaf.title}</td>
 				<td>${leaf.score}</td>
 				</tr>`)
-        }).join('') + '<tr><td colspan="2"><button style="width: 100%" onclick="window.print()">Print page</button></td></tr></tbody>';
+        }).join('') + `<tr><td><strong>Overall score</strong></td><td><strong>${rootScore}</strong></td></tr><tr><td colspan="2"><button style="width: 100%" onclick="window.print()">Print page</button></td></tr></tbody>`;
 
     }
 
@@ -282,6 +289,7 @@
         let nodes = new vis.DataSet({{nodes|tojson}});
         // coarse data cleanup - retuning only needed values
         let nodeLeaves = Object.values(nodes._data)
+        nodeLeaves = nodeLeaves.filter((item) => item.id !== "1")
 
         // return only node names
         nodeLeaves = nodeLeaves.map((item) => {

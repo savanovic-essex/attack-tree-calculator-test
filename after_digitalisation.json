@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "name": "Compromise\nSecurity"
+    },
+    {
+      "id": 2,
+      "name": "Unauthorised\n Access"
+    },
+    {
+      "id": 3,
+      "name": "Downtime"
+    },
+    {
+      "id": 4,
+      "name": "Incorrect\nInformation"
+    },
+    {
+      "id": 5,
+      "name": "Malicious\nServer Host"
+    },
+    {
+      "id": 6,
+      "name": "DDoS"
+    },
+    {
+      "id": 7,
+      "name": "DNS Issues"
+    },
+    {
+      "id": 8,
+      "name": "CMS Issues"
+    },
+    {
+      "id": 9,
+      "name": "SQL Injection "
+    },
+    {
+      "id": 10,
+      "name": "Bad Maintenance"
+    },
+    {
+      "id": 11,
+      "name": "Bad Plug-in"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2
+    },
+    {
+      "from": 1,
+      "to": 3
+    },
+    {
+      "from": 1,
+      "to": 4
+    },
+    {
+      "from": 2,
+      "to": 5
+    },
+    {
+      "from": 3,
+      "to": 6
+    },
+    {
+      "from": 3,
+      "to": 7
+    },
+    {
+      "from": 3,
+      "to": 8
+    },
+    {
+      "from": 4,
+      "to": 9
+    },
+    {
+      "from": 8,
+      "to": 10
+    },
+    {
+      "from": 8,
+      "to": 11
+    }
+  ]
+}
