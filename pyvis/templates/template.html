@@ -127,12 +127,10 @@
             }
         };
 
-        {% if conf %}
-            // if this network requires displaying the configure window,
-            // put it in its div
-            options.configure["container"] = document.getElementById("config");
-        {% endif %}
+        // attach table to HTML
+        options.configure["container"] = document.getElementById("config");
 
+        // define network, i.e. the attack tree graph
         network = new vis.Network(container, data, options);
 
         {% if tooltip_link %}
@@ -225,6 +223,7 @@
 
     }
 
+    // This function calculates the risk, i.e. the DREAD score from the entered values
     function calculateRisk() {
         // read in nodes from the vis dataset
         let nodes = new vis.DataSet({{nodes|tojson}});
@@ -273,7 +272,7 @@
 				<td>${leaf.title}</td>
 				<td>${leaf.score}</td>
 				</tr>`)
-        }).join('') + '</tbody>';
+        }).join('') + '<tr><td colspan="2"><button style="width: 100%" onclick="window.print()">Print page</button></td></tr></tbody>';
 
     }
 
